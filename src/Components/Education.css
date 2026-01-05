@@ -1,0 +1,82 @@
+/* Container Border Radius */
+.edu-main-container {
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+/* Left Purple Box */
+.bg-purple-main {
+    background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
+    min-height: 100%;
+}
+
+.icon-circle-bg {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+}
+
+/* Right Content Area */
+.bg-light-gray {
+    background-color: #f9f9ff;
+}
+
+.text-purple {
+    color: #6f42c1 !important;
+}
+
+.bg-purple-light {
+    background-color: #f0eaff !important;
+}
+.text-light-purple {
+    color:black !important; /* Professional light purple */
+}
+
+/* Smaller and clean description */
+.education-desc-small {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: left;
+    max-width: 90%;
+}
+
+/* Mini Cards */
+.mini-edu-card {
+    border-radius: 12px;
+    border: 1px solid #eee;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.mini-edu-card:hover {
+    border-color: #6f42c1;
+    transform: translateY(-3px);
+}
+
+.mini-logo {
+    width: 85px;
+    height: 85px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* SOCIAL ICONS LOGIC (As per your request) */
+.social-icon {
+    font-size: 1.5rem;
+    color: #6f42c1; /* Default Purple */
+    transition: 0.3s ease;
+}
+
+/* Hover Colors: Original Brand Colors */
+.social-icon.insta:hover { color: #E1306C; }
+.social-icon.fb:hover { color: #1877F2; }
+.social-icon.yt:hover { color: #FF0000; }
+.social-icon.link:hover { color: #0077B5; }
+.social-icon.git:hover { color: #333; }
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .bg-purple-main {
+        border-radius: 20px 20px 0 0;
+    }
+}

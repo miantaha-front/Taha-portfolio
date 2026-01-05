@@ -1,0 +1,55 @@
+/* Purple Hover and Underline Effect */
+.nav-item-custom {
+    color: #333 !important;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-item-custom:hover {
+    color: #6f42c1 !important; /* Purple Color */
+}
+
+/* Niche wali line jo hover par ayegi */
+.nav-item-custom::after {
+    content: '';
+    position: absolute;
+    width:0;
+    height: 2px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    background: #6f42c1;
+    transition: width 0.3s ease;
+    -webkit-transition: width 0.3s ease;
+}
+
+.nav-item-custom:hover::after {
+    width: 100%;
+    left: 0;
+    background: #6f42c1;
+}
+
+/* Navbar background white fix */
+.navbar {
+    background-color: white !important;
+}
+/* Font size chota karne ke liye */
+.nav-link {
+    font-size: 18px !important; /* Aap isay 12px bhi kar sakte hain */
+    font-weight:900px !important;
+    text-transform: uppercase; /* Professional look ke liye */
+    letter-spacing: 0.5px;
+}
+
+/* Hover line ko thora niche adjust karne ke liye */
+.nav-item-custom::after {
+    bottom: -2px; 
+}
+.my-nav-links {
+    /* Is se saari extra space left par aa jayegi aur menu right chala jayega */
+    margin-left: auto !important; 
+    
+    /* Yahan se aap adjust karein ke kitna right chahiye (pixels badhate jayen) */
+    margin-right: 30px !important; 
+}

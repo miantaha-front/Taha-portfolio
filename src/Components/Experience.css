@@ -1,0 +1,91 @@
+/* Section Background */
+.experience-section {
+    background-color: #f8f9ff;
+    padding: 80px 0;
+}
+
+/* Main Card Styling */
+.experience-card {
+    background: #ffffff !important;
+    border-radius: 30px;
+    border: 1px solid rgba(111, 66, 193, 0.1);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Glow Effect Fix (Ye card ke peeche rahega) */
+.glow-effect {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(111, 66, 193, 0.5) 0%, transparent 60%);
+    animation: rotateGlow 8s linear infinite;
+    z-index: -1;
+}
+
+@keyframes rotateGlow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Company Name & Location Text */
+.experience-card h4 {
+    color: #2d3436 !important; /* Dark color for visibility */
+    font-weight: 700;
+}
+
+.experience-card p.text-muted {
+    color: #636e72 !important; /* Darker grey for readability */
+    font-size: 0.95rem;
+}
+
+/* Job Title (Web Developer) */
+.experience-card h3 {
+    color: #2d3436 !important;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+/* List Items (Text visibility fix) */
+.tech-tasks li span {
+    color: #444 !important; /* Proper dark color */
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+/* Skill Tags */
+.skill-tag {
+    background: #f0eaff;
+    color: #6f42c1 !important;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 10px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.skill-tag:hover {
+    background: #6f42c1;
+    color: #ffffff !important;
+}
+
+/* Badge Fix */
+.badge-date {
+    background-color: #6f42c1 !important;
+    color: white !important;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+}
+
+/* Responsive Line */
+@media (min-width: 768px) {
+    .border-end-md {
+        border-right: 2px solid #f1f1f1 !important;
+    }
+}

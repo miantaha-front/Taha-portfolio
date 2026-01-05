@@ -1,0 +1,101 @@
+.footer-professional-v2 {
+    background-color: #0b0b18;
+    color: #ffffff;
+    padding: 80px 0 20px 0;
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.f-logo { font-weight: 800; font-size: 1.8rem; margin-bottom: 20px; }
+.purple-txt { color: #a78bfa; }
+
+.f-desc { color: #94a3b8; font-size: 0.9rem; line-height: 1.7; margin-bottom: 25px; }
+.f-heading{
+    margin-left: -190px;
+}
+@media (max-width: 991px) {
+    .f-heading {
+        margin-left: 0px;
+    }
+}
+/* Alignment Fix for Lists */
+.f-list-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Essential Fix */
+}
+
+.f-list-items li {
+    display: flex; /* Fixes icon and text alignment */
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+.f-list-items li a {
+    color: #94a3b8;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s ease;
+}
+
+.f-list-items li a:hover { color: #ffffff; transform: translateX(5px); }
+
+.li-icon { color: #a78bfa; font-size: 0.85rem; flex-shrink: 0; }
+
+/* Heading Style */
+.f-heading {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #f1f5f9;
+}
+
+/* Social Icons row */
+.f-socials-row { display: flex; gap: 15px; }
+.s-icon-link {
+    width: 40px; height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    display: flex;
+    align-items: center; justify-content: center;
+    color: #fff; text-decoration: none; transition: 0.3s;
+}
+.s-icon-link:hover { background: #7c3aed; transform: translateY(-3px); }
+
+/* Contact Section Fix */
+.c-info { display: flex; align-items: flex-start; gap: 12px; color: #94a3b8; font-size: 0.95rem; }
+.c-icon { color: #a78bfa; margin-top: 4px; }
+
+.availability-status {
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.2);
+    padding: 8px 15px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    color: #4ade80;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Bottom Strip */
+.f-copyright-strip {
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    margin-top: 60px;
+    padding: 25px 0;
+    text-align: center;
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+/* Responsive Gaps Fix */
+@media (max-width: 768px) {
+    .f-col { text-align: left !important; } /* Maintains left alignment on mobile */
+    .f-socials-row { justify-content: flex-start; }
+}

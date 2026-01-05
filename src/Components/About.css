@@ -1,0 +1,84 @@
+.about-section {
+    background-color: #fcfaff;
+}
+/* Image Frame Logic */
+.about-img-frame {
+    position: relative;
+    padding: 20px;
+}
+
+.about-img {
+    border-radius: 20px; /* Square with slight round corners */
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Image ke peeche jo design box hai */
+.frame-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    background-color: #6f42c122; /* Very light purple */
+    border: 2px solid #6f42c1;
+    border-radius: 20px;
+    z-index: 1;
+    transform: translate(-15px, -15px); /* Decorative box position */
+}
+/* About Me Heading Style */
+.about-title {
+    font-size: 1.5rem; /* Heading bari kar di */
+    display: flex;
+    align-items: center;
+}
+
+/* Alignment Left fix */
+.text-start {
+    text-align: left !important;
+}
+
+.about-description {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #444;
+    max-width: 95%;
+}
+
+/* Icons - Normal & Professional Size */
+.icon-normal {
+    font-size: 1.3rem; /* Normal size jo clear nazar aaye */
+}
+
+.info-text {
+    font-size: 1rem;
+    color: #333;
+}
+
+.info-item {
+    padding: 5px 0;
+}
+
+.text-purple {
+    color: #6f42c1 !important;
+}
+
+/* Buttons */
+.btn-purple {
+    background-color: #6f42c1 !important;
+    color: white !important;
+    border-radius: 5px;
+}
+
+.btn-outline-purple {
+    border: 2px solid #6f42c1 !important;
+    color: #6f42c1 !important;
+    background: transparent;
+    border-radius: 5px;
+}
+
+.btn-outline-purple:hover {
+    background-color: #6f42c1 !important;
+    color: white !important;
+}

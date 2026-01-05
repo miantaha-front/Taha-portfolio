@@ -1,0 +1,112 @@
+.hero-wrapper {
+    /* Image ka path yahan dein */
+    background-image: linear-gradient(rgba(243, 239, 255, 0.9), rgba(255, 255, 255, 0.8)), 
+                      url('C:\Users\Madina\Documents\React Js Learn\portfolio\public\bgimgSecA.webp'); 
+    
+    background-size: cover;      /* Image poore div ko cover karegi */
+    background-position: center;  /* Image center mein rahegi */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional: Is se scrolling effect cool lagta hai */
+    
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.welcome-tag {
+    background: #6f42c115;
+    color: #6f42c1;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hi-text {
+    font-size: 24px;
+    color: #555; /* Gray color taake white background par nazar aaye */
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.name-text {
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #1a1a1a; /* Dark Black for visibility */
+    line-height: 1.1;
+}
+
+.name-text .dot {
+    color: #6f42c1;
+}
+
+.typewriter-box {
+    font-size: 2rem;
+    color: #6f42c1; /* Theme color */
+    font-weight: 600;
+    margin-top: 10px;
+    display: flex; /* Is se dono ek hi line mein rahenge */
+    align-items: center;
+}
+
+/* Mobile par font thora chota karne ke liye */
+@media (max-width: 768px) {
+    .typewriter-box {
+        font-size: 1.5rem;
+        justify-content: center; /* Mobile par center alignment */
+    }
+}
+
+/* Email Box Professional Styling */
+.email-form-wrapper {
+    max-width: 480px;
+}
+
+.custom-input-group {
+    background: white;
+    padding: 6px;
+    border-radius: 50px;
+    border: 1px solid #ddd;
+}
+
+.email-field {
+    border: none !important;
+    box-shadow: none !important;
+    padding-left: 25px !important;
+    border-radius: 50px !important;
+}
+
+.contact-submit-btn {
+    white-space: nowrap;
+    background: #6f42c1 !important;
+    border: none !important;
+    border-radius: 50px !important;
+    padding: 12px 35px !important;
+    font-weight: 600;
+    transition: 0.3s all ease;
+}
+
+.contact-submit-btn:hover {
+    background: #5a32a3 !important;
+    transform: translateY(-2px);
+}
+
+/* Image Framing */
+.hero-main-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+    box-shadow: 25px 25px 0px #6f42c110; /* Soft Purple Shadow */
+    object-fit: cover;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .name-text { font-size: 3rem; }
+    .content-column { text-align: center !important; margin-bottom: 50px; }
+    .email-form-wrapper { margin: 0 auto; }
+}
