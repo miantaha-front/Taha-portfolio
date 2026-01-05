@@ -1,7 +1,7 @@
 .hero-wrapper {
     /* Image ka path yahan dein */
     background-image: linear-gradient(rgba(243, 239, 255, 0.9), rgba(255, 255, 255, 0.8)), 
-                      url('C:\Users\Madina\Documents\React Js Learn\portfolio\public\bgimgSecA.webp'); 
+                      url('C:\Users\Madina\Documents\React Js Learn\portfolio\public\bgimgseca.webp'); 
     
     background-size: cover;      /* Image poore div ko cover karegi */
     background-position: center;  /* Image center mein rahegi */

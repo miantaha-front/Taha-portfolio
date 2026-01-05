@@ -44,7 +44,7 @@ const SectionA = () => {
             <div className="image-frame">
                {/* Note: Apni image ko src/assets folder mein rakh kar import karein */}
               <img 
-                src="\OURIMG2.jpeg" 
+                src={process.env.PUBLIC_URL + "/OURIMG2.jpeg"} 
                 alt="Mian Taha" 
                 className="hero-main-img" 
               />
