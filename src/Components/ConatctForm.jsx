@@ -1,9 +1,29 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Container, Form, Button } from 'react-bootstrap';
 import { FaPaperPlane } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 import './ContactForm.css';
 
 const Contact = () => {
+  const form = useRef(); // Form reference banaya
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      'service_pqbwpm3',   // Apni Service ID yahan likhein
+      'template_bqg35c7',  // Apni Template ID yahan likhein
+      form.current, 
+      'ckmQfTqtVKdmTjIpF'    // Apni Public Key yahan likhein
+    )
+    .then((result) => {
+        alert("Thankx! Your message will receive successfully.");
+        e.target.reset(); // Form clear karne ke liye
+    }, (error) => {
+        console.log("EmailJS Error:", error); 
+    alert("Opps! Error: " + (error.text || "Check Console"));
+    });
+  };
   return (
     <section className="contact-section-bg py-5" id="contacts">
       <Container className="d-flex justify-content-center align-items-center min-vh-100">
@@ -19,27 +39,27 @@ const Contact = () => {
               <p className="small opacity-75 mt-2">I am available for new projects.</p>
             </div>
             {/* Apni Image ka path yahan dein */}
-            <img src="\OURIMG3.jpeg" alt="Profile" className="side-bg-img" />
+            <img src={process.env.PUBLIC_URL + "/ourimg3.jpeg"} alt="Profile" className="side-bg-img" />
           </div>
 
           {/* Right Side: Clean Form */}
           <div className="contact-right-box p-4 p-md-5 flex-grow-1 bg-white">
             <h5 className="text-center fw-bold mb-4 text-secondary">Contact Us</h5>
-            <Form>
+            <Form ref={form} onSubmit={sendEmail}>
               <Form.Group className="mb-3">
-                <Form.Control type="text" placeholder="Your Name" className="minimal-input" />
+                <Form.Control type="text" name="name" placeholder="Your Name" className="minimal-input" />
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Control type="email" placeholder="Your Email" className="minimal-input" />
+                <Form.Control type="email" name="email" placeholder="Your Email" className="minimal-input" />
               </Form.Group>
 
               <Form.Group className="mb-4">
-                <Form.Control as="textarea" rows={3} placeholder="Your Message" className="minimal-input" />
+                <Form.Control as="textarea" name="message" rows={3} placeholder="Your Message" className="minimal-input" />
               </Form.Group>
 
               <div className="text-center">
-                <Button className="btn-modern-purple px-5 py-2">
+                <Button type='submit' className="btn-modern-purple px-5 py-2">
                   Send Message <FaPaperPlane className="ms-2" />
                 </Button>
               </div>

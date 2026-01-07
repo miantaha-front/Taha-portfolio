@@ -26,7 +26,7 @@ const Experience = () => {
                 {/* Company Logo/Icon Side */}
                 <Col md={4} className="text-center border-end-md mb-4 mb-md-0">
                   <div className="company-logo-wrapper mx-auto mb-3">
-                    <img src="/TenzSofft.png" alt="TenzSoft" className="img-fluid main-logo" />
+                    <img src={process.env.PUBLIC_URL + "/tenzsofft.png"} alt="TenzSoft" className="img-fluid main-logo" />
                   </div>
                   <h4 className="fw-bold mb-0"><a  href="https://tenzsoft.com" target="_blank"      className="company-link">TenzSoft</a></h4>
                   <p className="text-muted small">Gujranwala, Pakistan</p>

@@ -8,8 +8,8 @@ const NavigationBar = () => {
     <Navbar collapseOnSelect expand="lg" bg="white" variant="light" fixed="top" className="shadow-sm py-3">
       <Container>
         {/* Logo Section */}
-        <Navbar.Brand href="#home" className="fw-bold fs-3 text-primary" style={{ color: '#6f42c1 !important' }}>
-         MianTaha<span className="text-dark">.</span>
+        <Navbar.Brand href="#home" className="fw-bold fs-3 text-purple" style={{ color: '#6f42c1 !important' }}>
+         MianTaha<span className="text-dark"></span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

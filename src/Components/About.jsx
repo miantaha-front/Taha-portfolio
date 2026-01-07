@@ -15,7 +15,7 @@ const About = () => {
             <div className="about-img-frame">
               {/* Circle nahi, balkay modern rectangular shape */}
               <img 
-                src="/AboutSecImg.webp" 
+                src={process.env.PUBLIC_URL + "/aboutsecimg.webp"}
                 alt="About Me" 
                 className="img-fluid about-img" 
               />

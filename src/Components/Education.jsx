@@ -34,7 +34,7 @@ const Education = () => {
               {/* Card 1: BS Software Engineering */}
               <Col sm={6}>
                 <div className="mini-edu-card p-3 shadow-sm bg-white d-flex align-items-start gap-3">
-                  <img src="/Scool.jpg" alt="Uni" className="mini-logo" />
+                  <img src={process.env.PUBLIC_URL + "/scool.jpg"} alt="Uni" className="mini-logo" />
                   <div>
                     <h6 className="fw-bold text-black mb-1">Matriculation</h6>
                     <p className="small text-muted mb-1">The Gujranwala Public High School</p>
@@ -46,7 +46,7 @@ const Education = () => {
               {/* Card 2: Intermediate */}
               <Col sm={6}>
                 <div className="mini-edu-card p-3 shadow-sm bg-white d-flex align-items-start gap-3">
-                  <img src="/college.jfif" alt="PGC" className="mini-logo" />
+                  <img src={process.env.PUBLIC_URL + "/college.png"} alt="PGC" className="mini-logo" />
                   <div>
                     <h6 className="fw-bold mb-1 text-black">Intermediate - ICS-PHY</h6>
                     <p className="small text-muted mb-1">Goverment Post Graduate College , SatelliteTown</p>
@@ -58,7 +58,7 @@ const Education = () => {
               {/* Card 3: Matriculation (As per 3 blocks requirement) */}
               <Col sm={6}>
                 <div className="mini-edu-card p-3 shadow-sm bg-white d-flex align-items-start gap-3">
-                  <img src="/uni.jfif" alt="School" className="mini-logo" />
+                  <img src={process.env.PUBLIC_URL + "/uni.png"} alt="School" className="mini-logo" />
                   <div>
                     <h6 className="fw-bold mb-1 text-black">BS-SoftwareEngineering</h6>
                     <p className="small text-muted mb-1">University Of Gujart , Main Campus</p>
@@ -72,10 +72,10 @@ const Education = () => {
                 <div className="mini-edu-card p-3 shadow-sm bg-white text-center d-flex flex-column justify-content-center">
                   <div className="d-flex justify-content-center gap-3">
                     <a href="https://www.instagram.com/wtf_mian_" className="social-icon insta"><FaInstagram /></a>
-                    <a href="#" className="social-icon fb"><FaFacebookF /></a>
+                    <a href="https://www.facebook.com/share/1DcGtgN73Z/" className="social-icon fb"><FaFacebookF /></a>
                     <a href="#" className="social-icon yt"><FaYoutube /></a>
-                    <a href="#" className="social-icon link"><FaLinkedinIn /></a>
-                    <a href="#" className="social-icon git"><FaGithub /></a>
+                    <a href="https://www.linkedin.com/in/muhammad-abu-huraira-927a65319/" className="social-icon link"><FaLinkedinIn /></a>
+                    <a href="https://github.com/miantaha-front" className="social-icon git"><FaGithub /></a>
                   </div>
                 </div>
               </Col>

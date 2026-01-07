@@ -9,9 +9,9 @@ const Project = () => {
       id: 1,
       title: "Gujjar Community",
       category: "FrontEnd",
-      image: "/GujjarComuunity.jpeg", // Apni project image ka link yahan lagayein
+      image: "/gujjarcomuunity.jpeg", // Apni project image ka link yahan lagayein
       tags: ["HTML5", "CSS3", "JavaScript" , "Bootstrap"],
-      liveLink: "#",
+      liveLink: "https://gujjarcommunity.com/",
       githubLink: "#"
     },
     {
@@ -48,7 +48,7 @@ const Project = () => {
             <Col key={project.id} md={6} lg={4}>
               <div className="project-card">
                 <div className="project-img-container">
-                  <img src={project.image} alt={project.title} className="img-fluid" />
+                  <img src={process.env.PUBLIC_URL + "/" + project.image} alt={project.title} className="img-fluid" />
                   <div className="project-overlay">
                     <div className="overlay-links">
                       <a href={project.liveLink} target="_blank" rel="noreferrer" title="Live Demo"><FaExternalLinkAlt /></a>

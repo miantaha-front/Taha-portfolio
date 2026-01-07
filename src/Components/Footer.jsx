@@ -16,9 +16,9 @@ const Footer = () => {
               Building robust and scalable web solutions. Specialized in MERN Stack and UI/UX Design.
             </p>
             <div className="f-socials-row">
-              <a href="#" className="s-icon-link"><FaGithub /></a>
-              <a href="#" className="s-icon-link"><FaLinkedin /></a>
-              <a href="#" className="s-icon-link"><FaInstagram /></a>
+              <a href="https://github.com/miantaha-front" className="s-icon-link"><FaGithub /></a>
+              <a href="https://www.linkedin.com/in/muhammad-abu-huraira-927a65319/" className="s-icon-link"><FaLinkedin /></a>
+              <a href="https://www.instagram.com/wtf_mian_" className="s-icon-link"><FaInstagram /></a>
             </div>
           </Col>
 
@@ -52,7 +52,7 @@ const Footer = () => {
           <Col lg={3} md={6} className="f-col">
             <h5 className="f-heading">Contact Details</h5>
             <div className="f-contact-box">
-              <div className="c-info"><FaEnvelope className="c-icon" /> <span>miantaha@example.com</span></div>
+              <div className="c-info"><FaEnvelope className="c-icon" /> <span>miantaha098@gmail.com</span></div>
               <div className="c-info mt-3"><FaMapMarkerAlt className="c-icon" /> <span>Gujranwala, Pakistan</span></div>
              <div className="c-info mt-3"><FaPhone className="c-icon" /> <span>+92 301 9101380</span></div>
             </div>
