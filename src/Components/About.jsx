@@ -66,10 +66,15 @@ const About = () => {
             </Row>
 
             <div className="d-flex gap-3 mt-4 justify-content-start">
-              <a href="/MianTaha-Resume.pdf" 
-  download="mianaha-resume.pdf" className="btn btn-purple px-4 py-2 fw-bold">Download Resume</a>
+            <a 
+  href="./resume.docx" 
+  download="MianTaha-Resume.docx" 
+  className="btn btn-purple px-4 py-2 fw-bold"
+>
+  Download Resume
+</a>
               <a 
-  href="#contact-section-bg" 
+  href="#contacts" 
   className="btn btn-outline-purple px-4 py-2 fw-bold text-decoration-none"
 >
   Hire Me

@@ -12,7 +12,7 @@ const Project = () => {
       image: "/gujjarcomuunity.jpeg", // Apni project image ka link yahan lagayein
       tags: ["HTML5", "CSS3", "JavaScript" , "Bootstrap"],
       liveLink: "https://gujjarcommunity.com/",
-      githubLink: "#"
+      githubLink: "https://gujjarcommunity.com/"
     },
     {
       id: 2,
@@ -20,8 +20,8 @@ const Project = () => {
       category: "FrontEnd",
       image: "/Hooria.jpeg",
       tags: ["php", "Bootstrap", "JavaScript"],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "https://hooriaconsultancy.com/",
+      githubLink: "https://hooriaconsultancy.com/"
     },
     {
       id: 3,
@@ -29,9 +29,36 @@ const Project = () => {
       category: "Frontend",
       image: "/Porfolio.jpeg",
       tags: ["React", "Bootstrap", "JavaScript"],
-      liveLink: "#",
-      githubLink: "#"
-    }
+      liveLink: "https://miantaha-front.github.io/Taha-portfolio/",
+      githubLink: "https://miantaha-front.github.io/Taha-portfolio/"
+    },
+    {
+    id: 4,
+      title: "friggaskrädderikemtvätt",
+      category: "Frontend",
+      image: "/frigga.jpeg",
+      tags: ["Wordpress","Elementor"],
+      liveLink: "https://xn--friggaskrdderikemtvtt-e2bk.se/",
+      githubLink: "https://xn--friggaskrdderikemtvtt-e2bk.se/"
+  },
+   {
+    id: 5,
+      title: "Tyre Touch Plus",
+      category: "Frontend",
+      image: "/tyre.jpeg",
+      tags: ["php", "Bootstrap", "JavaScript"],
+      liveLink: "https://tyretouchplus.co.uk/",
+      githubLink: "https://tyretouchplus.co.uk/"
+  },
+   {
+    id: 6,
+      title: "LotusFituk",
+      category: "Frontend",
+      image: "/lotus.jpeg",
+      tags: ["Wordpress","Elementor"],
+      liveLink: "https://lotusfituk.com/",
+      githubLink: "https://lotusfituk.com/"
+  }
   ];
 
   return (
