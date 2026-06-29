@@ -68,7 +68,7 @@ const About = () => {
             <div className="d-flex gap-3 mt-4 justify-content-start">
             <a 
   href="./resume.docx" 
-  download="MianTaha-Resume.docx" 
+  download="M-AbuHuraira-Resume.pdf" 
   className="btn btn-purple px-4 py-2 fw-bold"
 >
   Download Resume
