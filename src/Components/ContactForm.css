@@ -1,6 +1,6 @@
 .contact-section-bg {
     background-color: #f0f2f5; /* Light grey background for contrast */
-    width: 88%;
+    width: 100%;
     margin-top: 80px;
 }
 
@@ -91,4 +91,45 @@
     .contact-left-visual {
         min-height: 200px;
     }
+}
+
+
+/* --- 🔄 Revolving Border Outer Box --- */
+.contact-animated-border-box {
+    position: relative;
+    padding: 3px; /* Border line thickness */
+    background: transparent;
+    border-radius: 43px; /* Symmetrical curve according to your 40px radius */
+    overflow: hidden;
+    display: flex;
+    width: 96%;
+    max-width: 980px;
+}
+
+/* --- 🔮 Rotating Purple Light Engine --- */
+.contact-neon-spinner {
+    position: absolute;
+    width: 160%;
+    height: 320%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 20%,
+        #6f42c1 40%, /* Your exact purple brand color */
+        #a855f7 60%, 
+        transparent 80%
+    );
+    animation: rotateContactBorder 6s linear infinite;
+    z-index: 1;
+    left: -30%;
+    top: -110%;
+}
+
+@keyframes rotateContactBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Ensure card sits properly over the rotating layer */
+.contact-main-wrapper {
+    z-index: 2 !important;
 }

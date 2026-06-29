@@ -1,146 +1,239 @@
-.workflow-section {
-    background: #f8faff; /* Thora sa off-white background taake white cards uth kar nazar aayein */
-    padding: 100px 0;
+/* --- 🌌 Luxury Dark Theme Core Setup --- */
+.workflow-dark-section {
+    background: #0b0f19 !important; /* Premium deep dark profile slate */
     position: relative;
-    margin-top: 80px;
+    overflow: hidden;
 }
 
-.text-purple { 
-    color: #6f42c1 !important; 
+.z-index-top {
+    z-index: 5;
+    position: relative;
 }
 
-.heading-underline {
-    width: 80px;
+/* --- 🎯 Title Styles --- */
+.text-neon-cyan-gradient {
+    background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.workflow-glow-bar {
+    width: 90px;
     height: 4px;
-    background: linear-gradient(to right, #6f42c1, #a29bfe);
-    border-radius: 10px;
+    background: linear-gradient(90deg, #c084fc, #6366f1);
+    border-radius: 20px;
 }
 
-/* Central Vertical Line */
-.main-timeline {
+.workflow-sub-title {
+    color: #94a3b8 !important;
+    font-size: 1.05rem;
+}
+
+/* --- 🗺️ HORIZONTAL TIMELINE MATRIX --- */
+.horizontal-timeline-container {
+    width: 100%;
+    max-width: 1250px; /* Perfect tracking matching top navbar limits */
     position: relative;
-    max-width: 1100px;
-    margin: 50px auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0 20px;
 }
 
-.main-timeline::after {
-    content: '';
+/* Straight Continuous Axis Line running across center */
+.timeline-axis-line {
     position: absolute;
-    width: 3px;
-    background: #dee2e6; /* Light grey line */
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -1.5px;
-}
-
-/* Timeline Item Container */
-.timeline-item {
-    padding: 20px 50px;
-    position: relative;
-    width: 50%;
-}
-
-/* Professional Dots */
-.timeline-item::after {
-    content: '';
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    right: -12px;
-    background-color: #6f42c1;
-    border: 5px solid #fff;
     top: 50%;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, rgba(99, 102, 241, 0.1), #7c3aed 50%, rgba(99, 102, 241, 0.1));
+    box-shadow: 0 0 15px rgba(124, 58, 237, 0.5);
     transform: translateY(-50%);
-    border-radius: 50%;
-    z-index: 2;
-    box-shadow: 0 0 10px rgba(111, 66, 193, 0.4);
-}
-
-.left { left: 0; }
-.right { left: 50%; }
-
-.right::after { left: -12px; }
-
-/* The "Amazing" Content Box */
-.timeline-content {
-    padding: 35px;
-    background: #ffffff;
-    border-radius: 25px;
-    border: 1px solid rgba(0,0,0,0.03);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05) !important; /* Soft Shadow */
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
     z-index: 1;
 }
 
-.timeline-content:hover {
-    transform: scale(1.03); /* Chota sa pop-up effect */
-    box-shadow: 0 20px 40px rgba(111, 66, 193, 0.12) !important;
-    border-color: #6f42c1;
+/* Steps Symmetrical Alignment Grid */
+.timeline-steps-flex-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    width: 100%;
 }
 
-/* Icon Box Styling */
-.icon-box {
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #6f42c1, #a29bfe);
-    color: white;
-    border-radius: 15px;
+/* --- 📦 ALTERNATING DIRECTION ENGINE --- */
+.horizontal-timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 23%; /* Splits space evenly across 4 layout blocks */
+}
+
+/* Step 1 & 3: Pushes content DOWN below center path line */
+.box-below-axis {
+    flex-direction: column;
+    padding-top: 45px;
+}
+.box-below-axis .axis-node-indicator {
+    position: absolute;
+    top: -18px;
+}
+
+/* Step 2 & 4: Pulls content UP above center path line */
+.box-above-axis {
+    flex-direction: column-reverse;
+    padding-bottom: 45px;
+}
+.box-above-axis .axis-node-indicator {
+    position: absolute;
+    bottom: -18px;
+}
+
+/* --- 🔮 VECTOR NODE DOT INJECTORS --- */
+.axis-node-indicator {
+    width: 36px;
+    height: 36px;
+    background: #0f172a;
+    border: 3px solid #7c3aed;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    box-shadow: 0 8px 15px rgba(111, 66, 193, 0.2);
+    box-shadow: 0 0 20px rgba(124, 58, 237, 0.8);
+    transition: all 0.4s ease;
+    z-index: 5;
 }
 
-/* Text Visibility Improvements */
-.timeline-content h4 {
-    color: #212529 !important; /* Deep Dark Black for headings */
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-}
-
-.timeline-content p {
-    color: #555e66 !important; /* Dark Grey for descriptions - High contrast */
-    line-height: 1.6;
-    font-size: 0.95rem;
-    font-weight: 400;
-}
-
-
-/* Giant Step Numbers */
-.step-number {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    font-size: 3.5rem;
+.node-number-badge {
+    font-size: 0.85rem;
     font-weight: 800;
-    color: #6f42c1; /* Bohot halka purple number background mein */
-    z-index: -1;
-    user-select: none;
+    color: #c084fc;
 }
 
-/* Mobile Responsive Fixes */
-@media screen and (max-width: 768px) {
-    .main-timeline::after { left: 31px; }
-    
-    .timeline-item {
+/* --- 💳 CYBER GLOWING TIMELINE CARDS --- */
+.cyber-workflow-card {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 18px;
+    width: 100%;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Internal Dynamic Lights on card hover */
+.card-pulse-glowing-neon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    background: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.15), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Dynamic Interactive Animations */
+.horizontal-timeline-item:hover .cyber-workflow-card {
+    transform: translateY(isEven ? 8px : -8px); /* Shifts dynamically away from line */
+    border-color: rgba(192, 132, 252, 0.6);
+    box-shadow: 0 15px 40px rgba(124, 58, 237, 0.2);
+}
+
+.horizontal-timeline-item:hover .box-below-axis .cyber-workflow-card { transform: translateY(8px); }
+.horizontal-timeline-item:hover .box-above-axis .cyber-workflow-card { transform: translateY(-8px); }
+
+.horizontal-timeline-item:hover .axis-node-indicator {
+    background: #7c3aed;
+    transform: scale(1.2);
+    box-shadow: 0 0 25px #c084fc;
+}
+
+.horizontal-timeline-item:hover .node-number-badge {
+    color: #ffffff;
+}
+
+.horizontal-timeline-item:hover .card-pulse-glowing-neon {
+    opacity: 1;
+}
+
+/* --- 💠 Card Inner Elements Setup --- */
+.workflow-icon-sphere {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.2) 0%, rgba(99, 102, 241, 0.05) 100%);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c084fc;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
+}
+
+.horizontal-timeline-item:hover .workflow-icon-sphere {
+    background: linear-gradient(135deg, #7c3aed, #6366f1);
+    color: #ffffff;
+    transform: rotate(8deg);
+}
+
+.workflow-title {
+    color: #f8fafc;
+    font-size: 1.15rem;
+    letter-spacing: -0.3px;
+}
+
+.workflow-desc {
+    color: #94a3b8;
+    font-size: 0.88rem;
+    line-height: 1.5;
+}
+
+/* --- 📱 RESPONSIVE ADAPTABILITY TRACK --- */
+@media (max-width: 991.98px) {
+    .horizontal-timeline-container {
+        max-width: 720px;
+    }
+    .timeline-axis-line {
+        display: none; /* Disables standard linear map on smaller mobile targets */
+    }
+    .timeline-steps-flex-grid {
+        flex-direction: column;
+        gap: 35px;
+    }
+    .horizontal-timeline-item {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 20px;
-        margin-bottom: 30px;
+        padding: 0 !important;
+        flex-direction: row !important; /* Converts gracefully back to structural rows */
+        gap: 20px;
     }
-    
-    .timeline-item::after {
-        left: 19px;
-        right: auto;
+    .axis-node-indicator {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        flex-shrink: 0;
     }
-    
-    .right { left: 0%; }
-    
-    .timeline-content {
-        padding: 25px;
+    .cyber-workflow-card {
+        text-align: left;
     }
+    .horizontal-timeline-item:hover .cyber-workflow-card {
+        transform: translateX(8px) !important;
+    }
+}
+
+/* Entry Animation Trigger */
+.element-fade-in-up {
+    animation: revealUpEffects 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+@keyframes revealUpEffects {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
 }

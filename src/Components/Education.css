@@ -1,82 +1,221 @@
-/* Container Border Radius */
-.edu-main-container {
+/* --- 🌌 Main Section Full Dark & Width Setup --- */
+.education-modern-section {
+    background: #09041a !important; /* Perfect seamless black backdrop */
+    color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ambient glow spotlight behind the container */
+.purple-bg-glow-top {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;
+    height: 200px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.25) 0%, rgba(0,0,0,0) 70%);
+    filter: blur(35px);
+    pointer-events: none;
+}
+
+.edu-icon-badge {
+    width: 54px;
+    height: 54px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #c084fc;
+}
+
+.title-accent-line {
+    width: 50px;
+    height: 3px;
+    background: #a855f7;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+/* --- 🛤️ Track Container & Alignment Above Cards --- */
+.timeline-outer-container {
+    padding-top: 40px; /* Space to place the track line smoothly at the top */
+}
+
+/* Line is now sitting cleanly above numbers */
+.horizontal-timeline-line {
+    position: absolute;
+    top: 0px; 
+    left: 12%;
+    width: 76%;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        rgba(168, 85, 247, 0.1) 0%, 
+        rgba(168, 85, 247, 0.7) 50%, 
+        rgba(168, 85, 247, 0.1) 100%
+    );
+    z-index: 1;
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.3);
+}
+
+.z-index-cards {
+    z-index: 2;
+}
+
+/* --- 🗂️ Modern Horizontal Step Cards --- */
+.timeline-step-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 20px;
-    background-color: #fff;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    animation: microFloat 5s ease-in-out infinite alternate;
 }
 
-/* Left Purple Box */
-.bg-purple-main {
-    background: linear-gradient(135deg, #6f42c1 0%, #5a32a3 100%);
-    min-height: 100%;
+.timeline-step-card:hover {
+    transform: translateY(-8px) scale(1.01);
+    background: rgba(168, 85, 247, 0.03);
+    border-color: rgba(168, 85, 247, 0.35);
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.15);
 }
 
-.icon-circle-bg {
-    background: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 15px;
+/* Current active card glow setup */
+.current-active-card {
+    background: linear-gradient(145deg, rgba(168, 85, 247, 0.07) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border-color: rgba(168, 85, 247, 0.45) !important;
+    box-shadow: 0 15px 35px rgba(168, 85, 247, 0.2);
 }
 
-/* Right Content Area */
-.bg-light-gray {
-    background-color: #f9f9ff;
-}
-
-.text-purple {
-    color: #6f42c1 !important;
-}
-
-.bg-purple-light {
-    background-color: #f0eaff !important;
-}
-.text-light-purple {
-    color:black !important; /* Professional light purple */
-}
-
-/* Smaller and clean description */
-.education-desc-small {
+/* --- 🔢 Timeline Step Counter Nodes (Below Line Now) --- */
+.step-number-node {
+    position: absolute;
+    top: -46px; /* Positioned right under the main horizontal track line */
+    left: 35px;
+    width: 32px;
+    height: 32px;
+    background: #09041a;
+    border: 2px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 0.85rem;
-    line-height: 1.4;
-    text-align: left;
-    max-width: 90%;
+    font-weight: bold;
+    color: #cbd5e1;
+    z-index: 3;
+    transition: all 0.3s ease;
 }
 
-/* Mini Cards */
-.mini-edu-card {
-    border-radius: 12px;
-    border: 1px solid #eee;
-    height: 100%;
-    transition: 0.3s;
+.timeline-step-card:hover .step-number-node {
+    border-color: #a855f7;
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
 }
 
-.mini-edu-card:hover {
-    border-color: #6f42c1;
-    transform: translateY(-3px);
+.pulse-node {
+    border-color: #4ade80;
+    color: #4ade80;
+    box-shadow: 0 0 8px rgba(74, 222, 128, 0.2);
+    animation: nodeGlowPulse 1.8s infinite alternate;
 }
 
-.mini-logo {
-    width: 85px;
-    height: 85px;
-    border-radius: 8px;
+/* --- 🏷️ Inside Details & Badges --- */
+.badge-timeline-year {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #94a3b8;
+    padding: 4px 12px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 600;
+}
+
+.active-year-badge {
+    background: rgba(34, 197, 94, 0.1) !important;
+    border-color: rgba(34, 197, 94, 0.3) !important;
+    color: #4ade80 !important;
+}
+
+.edu-card-logo {
+    width: 42px;
+    height: 42px;
     object-fit: cover;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* SOCIAL ICONS LOGIC (As per your request) */
-.social-icon {
-    font-size: 1.5rem;
-    color: #6f42c1; /* Default Purple */
-    transition: 0.3s ease;
+.text-purple-accent {
+    color: #c084fc !important;
 }
 
-/* Hover Colors: Original Brand Colors */
-.social-icon.insta:hover { color: #E1306C; }
-.social-icon.fb:hover { color: #1877F2; }
-.social-icon.yt:hover { color: #FF0000; }
-.social-icon.link:hover { color: #0077B5; }
-.social-icon.git:hover { color: #333; }
+.text-transparent-gradient {
+    background: linear-gradient(to right, #ffffff, #d8b4fe);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 
-/* Responsive adjustments */
-@media (max-width: 767px) {
-    .bg-purple-main {
-        border-radius: 20px 20px 0 0;
-    }
+/* --- 🌐 Integrated Social Footer --- */
+.social-footer-panel {
+    border-top: 1px dashed rgba(255, 255, 255, 0.06);
+}
+
+.text-muted-silver {
+    color: #64748b;
+}
+
+.social-pill-item {
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.02);
+    color: #94a3b8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-pill-item:hover {
+    color: #fff;
+    transform: translateY(-4px);
+    box-shadow: 0 5px 15px currentColor;
+}
+
+.insta:hover { color: #fd5949; }
+.fb:hover { color: #1877f2; }
+.yt:hover { color: #ff0000; }
+.link:hover { color: #0077b5; }
+.git:hover { color: #fff; background: #24292e; }
+
+/* --- 🎬 Animations CSS Engines --- */
+@keyframes nodeGlowPulse {
+    0% { transform: scale(1); box-shadow: 0 0 0px rgba(74, 222, 128, 0); }
+    100% { transform: scale(1.05); box-shadow: 0 0 14px rgba(74, 222, 128, 0.5); }
+}
+
+@keyframes microFloat {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-5px); }
+}
+
+/* Initial smooth loading animations for page entrance */
+.card-animated-reveal {
+    animation: cardEntrance 0.8s ease-out both;
+}
+.dynamic-delay-1 { animation-delay: 0.2s; }
+.dynamic-delay-2 { animation-delay: 0.4s; }
+
+@keyframes cardEntrance {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }

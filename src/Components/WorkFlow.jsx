@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import { FaEdit, FaLayerGroup, FaCode, FaCheckDouble } from 'react-icons/fa';
 import './WorkFlow.css';
 
@@ -32,26 +32,57 @@ const Workflow = () => {
   ];
 
   return (
-    <section className="workflow-section py-5" id="experience">
-      <Container>
-        <div className="text-center mb-5">
-          <h2 className="fw-bold display-6"><span className="text-purple">Work Time Line</span></h2>
-          <div className="heading-underline mx-auto"></div>
-          <p className="text-muted mt-3">My step-by-step process to build your dream frontend.</p>
+    <section className="workflow-dark-section py-5 w-100" id="workflow">
+      <Container fluid className="px-md-5 position-relative z-index-top">
+        
+        {/* Section Header */}
+        <div className="text-center mb-5 element-fade-in-up">
+          <h2 className="fw-bold display-5 mb-2"> 
+            <span className="text-neon-cyan-gradient">Development Workflow</span>
+          </h2>
+          <div className="workflow-glow-bar mx-auto"></div>
+          <p className="workflow-sub-title text-muted mt-3">My step-by-step process to build your dream frontend.</p>
         </div>
 
-        <div className="main-timeline">
-          {steps.map((step, index) => (
-            <div key={step.id} className={`timeline-item ${index % 2 === 0 ? 'left' : 'right'}`}>
-              <div className="timeline-content shadow-sm p-4">
-                <div className="icon-box mb-3">{step.icon}</div>
-                <h4 className="fw-bold">{step.title}</h4>
-                <p className="text-muted mb-0">{step.desc}</p>
-                <span className="step-number">{step.id}</span>
-              </div>
-            </div>
-          ))}
+        {/* 👑 Main Horizontal Timeline Wrapper aligned to Navbar */}
+        <div className="horizontal-timeline-container mx-auto">
+          
+          {/* Central Horizontal Axis Line */}
+          <div className="timeline-axis-line"></div>
+          
+          <div className="timeline-steps-flex-grid">
+            {steps.map((step, index) => {
+              // Alternating logic: Even indexes (0, 2 -> Step 1, 3) sit below line. Odd indexes (1, 3 -> Step 2, 4) sit above line.
+              const isEven = index % 2 === 0;
+              const positionClass = isEven ? "box-below-axis" : "box-above-axis";
+
+              return (
+                <div key={step.id} className={`horizontal-timeline-item ${positionClass}`}>
+                  
+                  {/* The Vector Node Dot on the main line */}
+                  <div className="axis-node-indicator">
+                    <span className="node-number-badge">{step.id}</span>
+                  </div>
+
+                  {/* Cyber Floating Content Box */}
+                  <div className="cyber-workflow-card p-4">
+                    <div className="card-pulse-glowing-neon"></div>
+                    <div className="workflow-card-inner-content position-relative">
+                      <div className="workflow-icon-sphere mb-3">
+                        {step.icon}
+                      </div>
+                      <h4 className="fw-bold workflow-title mb-2">{step.title}</h4>
+                      <p className="workflow-desc mb-0">{step.desc}</p>
+                    </div>
+                  </div>
+
+                </div>
+              );
+            })}
+          </div>
+
         </div>
+
       </Container>
     </section>
   );

@@ -29,12 +29,12 @@ const About = () => {
                <FaUser className="me-2" /> About Me
             </h4>
             <h2 className="display-5 fw-bold mb-4">
-              I'm <span className="text-purple">Mian Taha</span>
+              I'm <span className="text-purple">Muhammad Abu Huraira</span>
             </h2>
             
             {/* Description - Left Aligned */}
             <p className="about-description mb-4 text-start">
-              I'm Mian Taha, a dedicated Software Engineer and Web Developer. I specialize in building professional WordPress websites using themes, templates, and page builders. Additionally, as a Front-End Developer, I create custom code-based websites using React.js, PHP, and Bootstrap. Currently, I am expanding my expertise into App Development and strengthening my knowledge of Backend systems.
+              I'm Abu Huraira, a dedicated Software Engineer and Web Developer. I specialize in building professional WordPress websites using themes, templates, and page builders. Additionally, as a Front-End Developer, I create custom code-based websites using React.js, PHP, and Bootstrap. Currently, I am expanding my expertise into App Development and strengthening my knowledge of Backend systems.
             </p>
 
             {/* Icons Section - Normal Size */}

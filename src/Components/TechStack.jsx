@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { SiHtml5, SiCss3, SiJavascript, SiReact, SiBootstrap, SiGithub,SiPhp, SiCplusplus, SiOpenjdk, SiMysql } from 'react-icons/si';
+import { SiHtml5, SiCss3, SiJavascript, SiReact, SiBootstrap, SiGithub,SiPhp, SiCplusplus, SiOpenjdk, SiMysql, SiJira } from 'react-icons/si';
 import './TechStack.css';
 
 const TechStack = () => {
@@ -15,6 +15,7 @@ const TechStack = () => {
     { name: "Java", icon: <SiOpenjdk />, color: "#ED8B00" },
     { name: "SQL", icon: <SiMysql />, color: "#4479A1" },
     { name: "GitHub", icon: <SiGithub />, color: "#181717" },
+    { name: "Jira", icon: <SiJira />, color: "#0052CC" },
   ];
 
   return (

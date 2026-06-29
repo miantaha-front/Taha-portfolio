@@ -1,91 +1,244 @@
-/* Section Background */
-.experience-section {
-    background-color: #f8f9ff;
-    padding: 80px 0;
-}
-
-/* Main Card Styling */
-.experience-card {
-    background: #ffffff !important;
-    border-radius: 30px;
-    border: 1px solid rgba(111, 66, 193, 0.1);
+/* --- 🪟 Section Core --- */
+.experience-fluid-section {
+    background: #fdfcff !important;
     position: relative;
-    z-index: 1;
     overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05) !important;
 }
 
-/* Glow Effect Fix (Ye card ke peeche rahega) */
-.glow-effect {
+.z-index-top {
+    z-index: 5;
+    position: relative;
+}
+
+/* 🎯 CUSTOM WIDTH WRAPPER MATCHING NAVBAR PRECISELY */
+.experience-navbar-aligned-container {
+    width: 100%;
+    max-width: 1250px; /* Exact uniform ceiling for modern header structures */
+    display: flex;
+    justify-content: center;
+}
+
+/* --- 🔮 GLOWING BORDER CONTROLLER --- */
+.premium-border-glow-wrapper {
+    position: relative;
+    padding: 3px; 
+    background: transparent;
+    border-radius: 24px;
+    overflow: hidden; 
+    display: flex;
+}
+
+.neon-revolving-glow {
     position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: radial-gradient(circle, rgba(111, 66, 193, 0.5) 0%, transparent 60%);
-    animation: rotateGlow 8s linear infinite;
-    z-index: -1;
+    width: 160%;
+    height: 320%;
+    background: conic-gradient(
+        from 0deg,
+        transparent 20%,
+        #7c3aed 40%,
+        #c084fc 60%,
+        transparent 80%,
+        #4f46e5 95%
+    );
+    animation: rotateNeonBorder 6s linear infinite;
+    z-index: 1;
+    left: -30%;
+    top: -110%;
 }
 
-@keyframes rotateGlow {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+@keyframes rotateNeonBorder {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
-/* Company Name & Location Text */
-.experience-card h4 {
-    color: #2d3436 !important; /* Dark color for visibility */
+/* --- 💳 Glassmorphism Base Card --- */
+.experience-glass-wide-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 22px; 
+    position: relative;
+    z-index: 2; 
+}
+
+/* Custom modern Flex Grid splitting columns without Bootstrap row limitations */
+.experience-split-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .experience-split-layout {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+}
+
+/* --- 🏢 Layout Columns Control --- */
+.branding-divider-column {
+    flex: 0 0 280px;
+    border-right: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.experience-details-content-column {
+    flex: 1;
+    width: 100%;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .branding-divider-column {
+        flex: 1;
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+        padding-bottom: 25px;
+    }
+}
+
+.brand-glowing-sphere {
+    width: 135px;
+    height: 135px;
+    background: #ffffff;
+    border: 1px solid rgba(168, 85, 247, 0.1);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.02);
+}
+
+.brand-fluid-img {
+    max-height: 85px;
+    object-fit: contain;
+}
+
+/* 🎯 Clickable Hover Text Transition Effect */
+.company-link-interaction {
+    color: #1e1b4b;
+    text-decoration: none;
+    font-weight: 800;
+    transition: color 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.company-link-interaction:hover {
+    color: #7c3aed !important;
+}
+
+.badge-neon-purple-timeline {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.1) 0%, rgba(168, 85, 247, 0.05) 100%) !important;
+    color: #6d28d9 !important;
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    font-size: 0.85rem;
     font-weight: 700;
 }
 
-.experience-card p.text-muted {
-    color: #636e72 !important; /* Darker grey for readability */
-    font-size: 0.95rem;
+/* --- 📝 Typography Alignment --- */
+.text-purple-neon-gradient {
+    background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a855f7 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-/* Job Title (Web Developer) */
-.experience-card h3 {
-    color: #2d3436 !important;
-    font-weight: 800;
+.heading-glow-bar {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #7c3aed, #c084fc);
+    border-radius: 20px;
+}
+
+.text-dark-slate-title {
+    color: #0f172a;
+    font-size: 1.8rem;
     letter-spacing: -0.5px;
 }
 
-/* List Items (Text visibility fix) */
-.tech-tasks li span {
-    color: #444 !important; /* Proper dark color */
-    font-size: 1rem;
-    font-weight: 500;
+.rocket-propulsion-icon {
+    color: #7c3aed;
+    font-size: 1.5rem;
+    animation: bounceSlow 3s ease-in-out infinite alternate;
 }
 
-/* Skill Tags */
-.skill-tag {
-    background: #f0eaff;
-    color: #6f42c1 !important;
-    border: none;
-    padding: 6px 16px;
+@keyframes bounceSlow {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-4px); }
+}
+
+.check-bullet-purple {
+    color: #7c3aed;
+    font-size: 1.15rem;
+}
+
+.high-tech-task-list span {
+    color: #334155;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- 📊 SYMMETRICAL SKILLS DECK LAYOUT GRID --- */
+.text-indigo-muted {
+    color: #4f46e5;
+    letter-spacing: 1.5px;
+    font-size: 0.75rem;
+}
+
+.language-deck-grid {
+    display: grid;
+    /* Automatically scales and distributes columns nicely without empty gaps */
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 12px;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .language-deck-grid {
+        grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    }
+}
+
+.premium-tech-pill {
+    font-size: 0.82rem;
+    font-weight: 700;
+    padding: 10px 12px;
     border-radius: 10px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    transition: 0.3s;
+    background: #ffffff;
+    color: #475569;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
-.skill-tag:hover {
-    background: #6f42c1;
+.premium-tech-pill:hover {
+    transform: translateY(-4px);
     color: #ffffff !important;
 }
 
-/* Badge Fix */
-.badge-date {
-    background-color: #6f42c1 !important;
-    color: white !important;
-    font-size: 0.9rem;
-    font-weight: 500;
-    box-shadow: 0 4px 10px rgba(111, 66, 193, 0.2);
+/* Individual Stacks Hover Palette */
+.tech-react:hover { background: #0284c7; border-color: #0284c7; box-shadow: 0 6px 15px rgba(2, 132, 199, 0.25); }
+.tech-bootstrap:hover { background: #7c3aed; border-color: #7c3aed; box-shadow: 0 6px 15px rgba(124, 58, 237, 0.25); }
+.tech-mysql:hover { background: #ea580c; border-color: #ea580c; box-shadow: 0 6px 15px rgba(234, 88, 12, 0.25); }
+.tech-cpp:hover { background: #16a34a; border-color: #16a34a; box-shadow: 0 6px 15px rgba(22, 163, 74, 0.25); }
+.tech-java:hover { background: #dc2626; border-color: #dc2626; box-shadow: 0 6px 15px rgba(220, 38, 38, 0.25); }
+.tech-jira:hover { background: #2563eb; border-color: #2563eb; box-shadow: 0 6px 15px rgba(37, 99, 235, 0.25); }
+.tech-pm:hover { background: #db2777; border-color: #db2777; box-shadow: 0 6px 15px rgba(219, 39, 119, 0.25); }
+.tech-php:hover { background: #4f46e5; border-color: #4f46e5; box-shadow: 0 6px 15px rgba(79, 70, 229, 0.25); }
+.tech-wp:hover { background: #1e293b; border-color: #1e293b; box-shadow: 0 6px 15px rgba(30, 41, 59, 0.25); }
+.tech-js:hover { background: #ca8a04; border-color: #ca8a04; box-shadow: 0 6px 15px rgba(202, 138, 4, 0.25); }
+
+/* Entrance Transition Elements */
+.element-fade-in-up {
+    animation: revealUpEffects 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
 }
 
-/* Responsive Line */
-@media (min-width: 768px) {
-    .border-end-md {
-        border-right: 2px solid #f1f1f1 !important;
-    }
+@keyframes revealUpEffects {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
 }

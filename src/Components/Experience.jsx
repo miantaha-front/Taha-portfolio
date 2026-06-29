@@ -1,79 +1,102 @@
 import React from 'react';
-import { Container, Row, Col, Badge } from 'react-bootstrap';
-import { FaBriefcase, FaCheckCircle, FaCode, FaRocket } from 'react-icons/fa';
+import { Container, Badge } from 'react-bootstrap';
+import { FaCheckCircle, FaRocket } from 'react-icons/fa';
 import './Experience.css';
 
 const Experience = () => {
   return (
-    <section className="experience-section py-5" id="experience">
-      <Container>
+    <section className="experience-fluid-section w-100 py-5" id="experience">
+      <Container fluid className="px-md-5 w-100 position-relative z-index-top">
+        
         {/* Section Header */}
-        <div className="text-center mb-5">
-          <h2 className="fw-bold display-6"> <span className="text-purple">My Experience</span></h2>
-          <div className="heading-underline mx-auto"></div>
-          <p className="text-muted mt-3">The only source of knowledge is experience.</p>
+        <div className="text-center mb-5 element-fade-in-up">
+          <h2 className="fw-bold display-5 mb-2"> 
+            <span className="text-purple-neon-gradient">My Experience</span>
+          </h2>
+          <div className="heading-glow-bar mx-auto"></div>
+          <p className="text-muted mt-3 modern-italic-sub">The only source of knowledge is experience.</p>
         </div>
 
-        <Row className="justify-content-center">
-          <Col lg={9}>
-            {/* Main Animated Card */}
-            <div className="experience-card shadow-lg p-4 p-md-5 position-relative overflow-hidden">
-              
-              {/* Background Animated Glow */}
-              <div className="glow-effect"></div>
-
-              <Row className="align-items-center position-relative">
-                {/* Company Logo/Icon Side */}
-                <Col md={4} className="text-center border-end-md mb-4 mb-md-0">
-                  <div className="company-logo-wrapper mx-auto mb-3">
-                    <img src={process.env.PUBLIC_URL + "/tenzsofft.png"} alt="TenzSoft" className="img-fluid main-logo" />
+        {/* 👑 Direct Full Width Container matching exact Nav Bar scale */}
+        <div className="experience-navbar-aligned-container mx-auto">
+          
+          <div className="premium-border-glow-wrapper w-100">
+            {/* Spinning Light Engine */}
+            <div className="neon-revolving-glow"></div>
+            
+            {/* Inner Glass Card */}
+            <div className="experience-glass-wide-card p-4 p-md-5 w-100">
+              <div className="experience-split-layout">
+                
+                {/* Left Side: Company Branding */}
+                <div className="branding-divider-column text-center px-3">
+                  <div className="brand-glowing-sphere mx-auto mb-4">
+                    <img src={process.env.PUBLIC_URL + "/tenzsofft.png"} alt="TenzSoft" className="brand-fluid-img" />
                   </div>
-                  <h4 className="fw-bold mb-0"><a  href="https://tenzsoft.com" target="_blank"      className="company-link">TenzSoft</a></h4>
-                  <p className="text-muted small">Gujranwala, Pakistan</p>
-                  <Badge bg="none" className="badge-date p-2 px-3 rounded-pill">
+                  <h3 className="fw-black company-premium-title mb-1">
+                    <a href="https://tenzsoft.com" target="_blank" rel="noreferrer" className="company-link-interaction">TenzSoft</a>
+                  </h3>
+                  <p className="text-muted small geo-tracking-text mb-3">Gujranwala, Pakistan</p>
+                  <Badge className="badge-neon-purple-timeline py-2 px-4 rounded-pill">
                     2025 - Present
                   </Badge>
-                </Col>
+                </div>
 
-                {/* Role & Details Side */}
-                <Col md={8} className="ps-md-5">
-                  <div className="d-flex align-items-center mb-2">
-                    <FaRocket className="text-purple me-2 bounce-animation" />
-                    <h3 className="fw-bold text-dark mb-0">Web Developer</h3>
+                {/* Right Side: Detailed Tech Descriptions */}
+                <div className="experience-details-content-column">
+                  <div className="d-flex align-items-center mb-3 main-role-header">
+                    <FaRocket className="rocket-propulsion-icon me-2" />
+                    <h2 className="fw-bold text-dark-slate-title mb-0">Front End Developer</h2>
                   </div>
                   
-                  <p className="experience-text text-muted">
-                    Contributing as a Core Web Developer, focusing on building high-performance 
-                    business websites and dynamic web applications.
+                  <p className="lead-experience-summary text-muted mb-4">
+                    Contributing as a Core Developer, focusing on building high-performance, beautiful, 
+                    and interactive interface ecosystems while structuring robust tech-stacks.
                   </p>
 
-                  <ul className="list-unstyled tech-tasks mt-4">
-                    <li className="mb-2 d-flex align-items-center">
-                      <FaCheckCircle className="text-purple me-2" /> 
-                      <span>Developing responsive UI with <b>React & Bootstrap</b></span>
+                  {/* Responsibilities */}
+                  <ul className="list-unstyled high-tech-task-list mb-4">
+                    <li className="mb-3 d-flex align-items-start step-task-item">
+                      <FaCheckCircle className="check-bullet-purple mt-1 me-2 flex-shrink-0" /> 
+                      <span>Developing highly responsive UI systems using <b>React.js & Bootstrap</b>.</span>
                     </li>
-                    <li className="mb-2 d-flex align-items-center">
-                      <FaCheckCircle className="text-purple me-2" /> 
-                      <span>Customizing WordPress themes and PHP backends</span>
+                    <li className="mb-3 d-flex align-items-start step-task-item">
+                      <FaCheckCircle className="check-bullet-purple mt-1 me-2 flex-shrink-0" /> 
+                      <span>Structuring efficient relational tables and optimized indexing via <b>MySQL</b>.</span>
                     </li>
-                    <li className="d-flex align-items-center">
-                      <FaCheckCircle className="text-purple me-2" /> 
-                      <span>Optimizing website speed and SEO performance</span>
+                    <li className="mb-3 d-flex align-items-start step-task-item">
+                      <FaCheckCircle className="check-bullet-purple mt-1 me-2 flex-shrink-0" /> 
+                      <span>Writing custom core systems, desktop tools, and procedural backend algorithms in <b>C++ & Java</b>.</span>
+                    </li>
+                    <li className="mb-3 d-flex align-items-start step-task-item">
+                      <FaCheckCircle className="check-bullet-purple mt-1 me-2 flex-shrink-0" /> 
+                      <span>Tracking sprints, tasks, deployment roadmaps, and workflows using <b>Jira Project Management</b>.</span>
                     </li>
                   </ul>
 
-                  {/* Skills Used Tags */}
-                  <div className="mt-4 d-flex flex-wrap gap-2">
-                    <span className="skill-tag">React.js</span>
-                    <span className="skill-tag">PHP</span>
-                    <span className="skill-tag">WordPress</span>
-                    <span className="skill-tag">JavaScript</span>
+                  {/* 📊 Beautiful Distributed Skills Layout Grid */}
+                  <div className="tech-stack-organized-deck pt-3">
+                    <h6 className="small text-uppercase fw-bold text-indigo-muted tracking-widest mb-3">Core Technical Infrastructure</h6>
+                    <div className="language-deck-grid">
+                      <div className="premium-tech-pill tech-react">React.js</div>
+                      <div className="premium-tech-pill tech-bootstrap">Bootstrap</div>
+                      <div className="premium-tech-pill tech-mysql">MySQL</div>
+                      <div className="premium-tech-pill tech-cpp">C++</div>
+                      <div className="premium-tech-pill tech-java">Java</div>
+                      <div className="premium-tech-pill tech-jira">Jira</div>
+                      <div className="premium-tech-pill tech-pm">Project Management</div>
+                      <div className="premium-tech-pill tech-php">PHP</div>
+                      <div className="premium-tech-pill tech-wp">WordPress</div>
+                      <div className="premium-tech-pill tech-js">JavaScript ES6</div>
+                    </div>
                   </div>
-                </Col>
-              </Row>
+                </div>
+
+              </div>
             </div>
-          </Col>
-        </Row>
+          </div>
+
+        </div>
       </Container>
     </section>
   );

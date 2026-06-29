@@ -1,101 +1,184 @@
-.projects-section {
-    background-color: #f8faff; /* Light background as you requested */
-}
-
-.text-purple { color: #6f42c1 !important; }
-
-.bg-light-purple {
-    background-color: #f0eaff !important;
-    color: #6f42c1 !important;
-    font-weight: 500;
-}
-
-/* Card Styling */
-.project-card {
-    background: #fff;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transition: all 0.4s ease;
-    border: 1px solid rgba(0,0,0,0.02);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(111, 66, 193, 0.12);
-}
-
-/* Image & Overlay */
-.project-img-container {
+/* --- 🌌 Cyber Dark Theme Core --- */
+.projects-cyber-dark-section {
+    background: #0b0f19 !important; /* Matches exactly with workflow matrix background */
     position: relative;
     overflow: hidden;
-    aspect-ratio: 16/10;
 }
 
-.project-img-container img {
+.z-index-top {
+    z-index: 5;
+    position: relative;
+}
+
+/* --- 📝 Section Typography --- */
+.text-purple-neon-gradient {
+    background: linear-gradient(135deg, #a855f7 0%, #c084fc 50%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.project-glow-bar {
+    width: 90px;
+    height: 4px;
+    background: linear-gradient(90deg, #c084fc, #6366f1);
+    border-radius: 20px;
+}
+
+.project-sub-title {
+    color: #94a3b8 !important;
+    font-size: 1.05rem;
+}
+
+/* --- 📐 NAVBAR GRID CONTROLLER --- */
+.projects-navbar-aligned-grid {
+    width: 100%;
+    max-width: 1250px; /* Precise uniform matching for modern portfolios */
+}
+
+/* --- 💳 CYBER GLASS PROJECT CARD --- */
+.cyber-project-card {
+    background: rgba(15, 23, 42, 0.65) !important;
+    border: 1px solid rgba(124, 58, 237, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card-top-glow-wire {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c084fc, transparent);
+    opacity: 0.3;
+    transition: opacity 0.4s ease;
+}
+
+/* --- 🖼️ MEDIA ANIMATION DECK --- */
+.project-img-container {
+    width: 100%;
+    height: 220px; /* Uniform height aspect lock */
+    background: #0f172a;
+}
+
+.project-dynamic-media {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.6s ease;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.project-card:hover .project-img-container img {
-    transform: scale(1.1);
-}
-
-.project-overlay {
+/* --- 🎛️ HIGH TECH ACTION OVERLAY --- */
+.project-cyber-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(111, 66, 193, 0.85); /* Purple Overlay */
+    background: rgba(11, 15, 25, 0.85); /* Smooth modern shielding background */
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 3;
+}
+
+.overlay-action-row {
+    transform: translateY(15px);
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.action-circle-link {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1e293b;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #f8fafc;
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;
-    transition: all 0.4s ease;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.project-card:hover .project-overlay {
+/* Custom Interactive Identity Colors */
+.neon-live:hover { background: #7c3aed; color: #ffffff; box-shadow: 0 0 15px #c084fc; border-color: #c084fc; }
+.neon-git:hover { background: #181717; color: #ffffff; box-shadow: 0 0 15px rgba(255, 255, 255, 0.4); border-color: rgba(255,255,255,0.4); }
+
+/* --- 📊 HOVER STATE CONTROLLER --- */
+.cyber-project-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(192, 132, 252, 0.4);
+    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+}
+
+.cyber-project-card:hover .project-dynamic-media {
+    transform: scale(1.08);
+}
+
+.cyber-project-card:hover .project-cyber-overlay {
     opacity: 1;
 }
 
-.overlay-links a {
-    color: #fff;
-    font-size: 1.5rem;
-    margin: 0 15px;
-    background: rgba(255,255,255,0.2);
-    width: 50px;
-    height: 50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transition: 0.3s;
-    text-decoration: none;
+.cyber-project-card:hover .overlay-action-row {
+    transform: translateY(0);
 }
 
-.overlay-links a:hover {
-    background: #fff;
-    color: #6f42c1;
-    transform: translateY(-5px);
+.cyber-project-card:hover .card-top-glow-wire {
+    opacity: 1;
 }
 
-/* Details Section */
-.category-text {
-    font-size: 0.85rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #888;
-    font-weight: 600;
+/* --- 📝 CARD DETAILS STRUCTURING --- */
+.category-matrix-text {
+    color: #6366f1;
+    font-size: 0.72rem;
+    letter-spacing: 1.5px;
 }
 
-.project-details h4 {
+.folder-system-indicator {
+    color: rgba(148, 163, 184, 0.4);
+    font-size: 1rem;
+}
+
+.project-core-title {
+    color: #f8fafc;
     font-size: 1.25rem;
-    transition: 0.3s;
+    letter-spacing: -0.3px;
+    line-height: 1.4;
 }
 
-.project-card:hover .project-details h4 {
-    color: #6f42c1 !important;
+/* --- 🎨 INFRASTRUCTURE PILLS --- */
+.cyber-infrastructure-pill {
+    background: rgba(30, 41, 59, 0.6) !important;
+    border: 1px solid rgba(226, 232, 240, 0.08);
+    color: #94a3b8 !important;
+    font-size: 0.75rem !important;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.cyber-project-card:hover .cyber-infrastructure-pill {
+    background: rgba(124, 58, 237, 0.08) !important;
+    border-color: rgba(124, 58, 237, 0.2);
+    color: #c084fc !important;
+}
+
+/* Entry Animation Mechanics */
+.element-fade-in-up {
+    animation: revealUpEffects 0.8s cubic-bezier(0.165, 0.84, 0.44, 1) both;
+}
+
+@keyframes revealUpEffects {
+    from { opacity: 0; transform: translateY(25px); }
+    to { opacity: 1; transform: translateY(0); }
 }

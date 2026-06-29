@@ -11,7 +11,7 @@ const Footer = () => {
           
           {/* Column 1: Intro */}
           <Col lg={3} md={6} className="f-col">
-            <h3 className="f-logo">Mian<span className="purple-txt">Taha.</span></h3>
+            <h3 className="f-logo">Muhammad <span className="purple-txt">Abu Huraira.</span></h3>
             <p className="f-desc">
               Building robust and scalable web solutions. Specialized in MERN Stack and UI/UX Design.
             </p>
@@ -61,7 +61,7 @@ const Footer = () => {
         </Row>
 
         <div className="f-copyright-strip">
-          <p>© 2026 Mian Taha. Proudly Designed in Gujranwala.</p>
+          <p>© 2026 Muhammad Abu Huraira. Proudly Designed in Gujranwala.</p>
         </div>
       </Container>
     </footer>

@@ -9,7 +9,7 @@ const NavigationBar = () => {
       <Container>
         {/* Logo Section */}
         <Navbar.Brand href="#home" className="fw-bold fs-3 text-purple" style={{ color: '#6f42c1 !important' }}>
-         MianTaha<span className="text-dark"></span>
+         Abu Huraira<span className="text-dark"></span>
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
