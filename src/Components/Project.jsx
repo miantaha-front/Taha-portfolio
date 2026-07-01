@@ -11,8 +11,8 @@ const Project = () => {
       category: "Core Production",
       image: "/TenzSoft-Portfolio.jpeg", 
       tags: ["PHP", "Bootstrap", "JavaScript ES6", "CSS3 Glow"],
-      liveLink: "https://miantaha-front.github.io/Taha-portfolio/", // Linked directly as requested
-      githubLink: "https://miantaha-front.github.io/Taha-portfolio/"
+      liveLink: "https://tenzsoft.com/", // Linked directly as requested
+      githubLink: "https://tenzsoft.com/"
     },
     {
       id: 2,
